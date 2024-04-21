@@ -1,0 +1,86 @@
+.header {
+    background: linear-gradient(to right,#fc9bd7,#fc79ca, #f5b1db);
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: auto;
+    margin: -8px;
+    justify-content: space-evenly;
+
+}
+
+.text{
+    font-family:'Times New Roman', Times, serif ;
+    justify-content: center;
+    color: #ffffff;
+}
+
+body{
+    background: linear-gradient(to top, #ffdfea, #fff)  ;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    text-align: left;
+}
+
+
+
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-color: #ff82ae;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3e82;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+a{
+    color:#131212;
+    }
+
+#question{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#nextButton, #restartButton{
+    border-radius: 500px;
+    background-color: #dd2063;
+}
+
+#nextButton:hover, #restartButton:hover{
+    background-color: #ee71be;
+}
