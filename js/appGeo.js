@@ -1,4 +1,4 @@
-// Definindo as perguntas, opções e respostas
+
 const questions = [
     {
         question: "Qual o maior continente do mundo em área terrestre?",
@@ -27,11 +27,11 @@ const questions = [
     }
 ];
 
-// Definindo variáveis globais
+
 let currentQuestion = 0;
 let score = 0;
 
-// Função para exibir a próxima pergunta
+
 function displayQuestion() {
     const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
@@ -40,7 +40,7 @@ function displayQuestion() {
     questionElement.textContent = questions[currentQuestion].question;
     optionsElement.innerHTML = '';
 
-    // Exibir opções
+   
     questions[currentQuestion].options.forEach((option, index) => {
         const button = document.createElement("button");
         button.textContent = option;
@@ -53,7 +53,7 @@ function displayQuestion() {
     resultElement.textContent = '';
 }
 
-// Função para verificar a resposta
+
 function checkAnswer(option) {
     const correctAnswer = questions[currentQuestion].answer;
     const resultElement = document.getElementById("result");
@@ -65,30 +65,30 @@ function checkAnswer(option) {
         resultElement.textContent = `Resposta incorreta! A resposta correta é ${correctAnswer}.`;
     }
 
-    // Desabilitar todos os botões de opção
+   
     const optionButtons = document.querySelectorAll("#options button");
     optionButtons.forEach(button => {
         button.disabled = true;
     });
 
-    // Exibir botão de próxima pergunta
+    
     const nextButton = document.getElementById("nextButton");
     nextButton.style.display = 'block';
 
-    // Se for a última pergunta, exibir botão de refazer
+
     if (currentQuestion === questions.length - 1) {
         const restartButton = document.getElementById("restartButton");
         restartButton.style.display = 'block';
     }
 }
 
-// Função para avançar para a próxima pergunta
+
 function nextQuestion() {
     currentQuestion++;
 
     if (currentQuestion < questions.length) {
         displayQuestion();
-        // Esconder botão de próxima pergunta
+        
         const nextButton = document.getElementById("nextButton");
         nextButton.style.display = 'none';
     } else {
@@ -96,7 +96,7 @@ function nextQuestion() {
     }
 }
 
-// Função para refazer o quiz
+
 function restartQuiz() {
     currentQuestion = 0;
     score = 0;
@@ -105,17 +105,17 @@ function restartQuiz() {
     restartButton.style.display = 'none';
 }
 
-// Função para exibir o resultado
+
 function showResult() {
     const resultElement = document.getElementById("result");
     resultElement.textContent = `Você acertou ${score} de ${questions.length} perguntas.`;
 }
 
-// Event listener para o botão "Próxima Pergunta"
+
 document.getElementById("nextButton").addEventListener("click", nextQuestion);
 
-// Event listener para o botão "Refazer"
+
 document.getElementById("restartButton").addEventListener("click", restartQuiz);
 
-// Exibir a primeira pergunta ao carregar a página
+
 displayQuestion();
